@@ -1,13 +1,26 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  if (word.split('').reverse().join('') === word) {
+    return true 
+  } else {
+    return false
+  }
 }
 
 /* 
-  Add your pseudocode here
+Need to split the string into an array of letters
+  Use .split(" ")
+Use the .reverse() method to reverse the array of letters
+Use .join() method to rejoin the elements of the array (letters) back into a string
+If the string is equal to the reversed string, return true
+Otherwise, return false
 */
 
 /*
-  Add written explanation of your solution here
+  function isPalindrome takes a string as an argument
+    if the string is equal to a palindrome:
+      return true
+    if the string is not equal to a palindrome:
+      return false  
 */
 
 // You can run `node index.js` to view these console logs
@@ -23,3 +36,4 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
